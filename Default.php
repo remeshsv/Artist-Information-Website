@@ -1,3 +1,16 @@
+<!-- 
+    Student Name: Sreemoolam Venkitachalam, Remesh
+    Project 3: Artist Portal
+
+    Database Information
+    
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "test";
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,15 +34,15 @@
 <div class="container-fluid">
     <div class="row col-sm-4" style="background-color:black;">
     <ul class="nav nav-tabs list-inline">
-    <li style="color:white; align:center;">Assign 1</li>
+    <li style="color:white; align:center;"><h4>Assign 1</h4></li>
     <li><a href="Default.php">Home</a></li>
     <li><a href="AboutUs.php">About Us</a></li>
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages
     <span class="caret"></span></a>
     <ul class="dropdown-menu">
       <li><a href="Part01_ArtistsDataList.php">Artist Data List</a></li>
-      <li><a href="Part02-ArtistDetails.php">Single Artist</a></li>
-      <li><a href="Part03-ArtistDetails.php">Single Work</a></li> 
+      <li><a href="Part02-ArtistDetails.php?id=19">Single Artist</a></li>
+      <li><a href="Part03-ArtistDetails.php?id=394">Single Work</a></li> 
       <li><a href="Part04_Search.php">Search</a></li>
     </ul></li>
     </div>
@@ -37,8 +50,8 @@
 
           <form action="Part04_Search.php" method="POST">
             <p class="text-right" style="color:white;">Remesh Sreemoolam Venkitachalam
-            <input type="text" name="question" class="form-control input-sm" placeholder="Search" style="width:120px; display: inline-block;"/>
-          <button type="submit" class="btn btn-primary btn-sm" style="display: inline-block;">Search</button>
+            <input type="text" name="question" class="form-control input-sm" placeholder="Search" style="width:140px; display: inline-block;"/>
+          <button type="submit" name="submit" class="btn btn-primary btn-sm" style="display: inline-block;">Search</button>
         </p></form>
     
     </div>

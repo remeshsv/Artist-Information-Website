@@ -12,15 +12,15 @@
 <div class="container-fluid">
     <div class="row col-sm-4" style="background-color:black;">
     <ul class="nav nav-tabs list-inline">
-    <li style="color:white; align:center;">Assign 1</li>
+    <li style="color:white; align:center;"><h4>Assign 1</h4></li>
     <li><a href="Default.php">Home</a></li>
     <li><a href="AboutUs.php">About Us</a></li>
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages
     <span class="caret"></span></a>
     <ul class="dropdown-menu">
       <li><a href="Part01_ArtistsDataList.php">Artist Data List</a></li>
-      <li><a href="Part02-ArtistDetails.php">Single Artist</a></li>
-      <li><a href="Part03-ArtistDetails.php">Single Work</a></li> 
+      <li><a href="Part02-ArtistDetails.php?id=19">Single Artist</a></li>
+      <li><a href="Part03-ArtistDetails.php?id=394">Single Work</a></li> 
       <li><a href="Part04_Search.php">Search</a></li>
     </ul></li>
     </div>
@@ -28,7 +28,7 @@
 
           <form action="Part04_Search.php" method="POST">
             <p class="text-right" style="color:white;">Remesh Sreemoolam Venkitachalam
-            <input type="text" name="question" class="form-control input-sm" placeholder="Search" style="width:120px; display: inline-block;"/>
+            <input type="text" name="question" class="form-control input-sm" placeholder="Search" style="width:140px; display: inline-block;"/>
           <button type="submit" class="btn btn-primary btn-sm" style="display: inline-block;">Search</button>
         </p></form>
     
@@ -45,7 +45,7 @@ if ($id==NULL)
 }
 
 
-echo $id;
+//echo $id;
 
 $servername = "localhost";
 $username = "root";
@@ -59,12 +59,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "Connected successfully </br>";
-
-/*$sql = "SELECT artworks.Description, artworks.Title as Title, artworks.ImageFileName, artworks.Excerpt, artworks.ArtWorkType, 
-        artworks.YearOfWork, artworks.OriginalHome, artists.FirstName, artists.LastName from artworks, artists 
-        WHERE artworks.ArtWorkID=$id and artists.ArtistID = (Select ArtistID from artworks where ArtWorkID=$id)";
-//$sql = "SELECT Title, ArtistID, Description, ImageFileName, Excerpt, ArtWorkType, YearOfWork, OriginalHome FROM artworks where ArtWorkID=$id";*/
+//echo "Connected successfully </br>";
 
 $sql = "SELECT artworks.ArtistID as ArtistID, artworks.Description, artworks.Title as Title, artworks.ImageFileName, artworks.Excerpt, artworks.ArtWorkType, 
         artworks.YearOfWork as YoW, artworks.OriginalHome, artworks.MSRP, artworks.Medium, artworks.Width, artworks.Height,

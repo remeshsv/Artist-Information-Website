@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="row col-sm-4" style="background-color:black;">
     <ul class="nav nav-tabs list-inline">
-    <li style="color:white; align:center;">Assign 1</li>
+    <li style="color:white; align:center;"><h4>Assign 1</h4></li>
     <li><a href="Default.php">Home</a></li>
     <li><a href="AboutUs.php">About Us</a></li>
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages
